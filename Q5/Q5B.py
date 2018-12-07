@@ -4,6 +4,7 @@ answer = 50000
 with open("input.txt", "r") as ins:
 	for line in ins:
 		testSet = set(line.lower())
+		print(len(testSet))
 		for x in testSet:
 			y = line.replace(x, '').replace(x.upper(), '')
 			le = 0
