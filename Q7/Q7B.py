@@ -31,12 +31,12 @@ while possibleKeys:
 			possibilites.append(val)
 
 	target = ""
-	for x in sorted(possibilites[:5]):
+	for x in sorted(possibilites)[:5]:
 		if not target or remainingTime[x] < remainingTime[target]:
 			target = x
 	totalTime += remainingTime[target]
 	decTime = remainingTime[target]
-	for x in sorted(possibilites[:5]):
+	for x in sorted(possibilites)[:5]:
 		remainingTime[x] = max(0, remainingTime[x] - decTime)
 
 	for val in postreqs[target]:
